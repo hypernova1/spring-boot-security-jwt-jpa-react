@@ -2,12 +2,13 @@ package com.sam.api.repository;
 
 import com.sam.api.model.Role;
 import com.sam.api.model.RoleName;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface RoleRepository {
+public interface RoleRepository extends JpaRepository<Role, Long> {
 
-    Optional<Role> findByName(RoleName roleName);
+    Optional<Role> findByRoleName(RoleName roleName);
 }

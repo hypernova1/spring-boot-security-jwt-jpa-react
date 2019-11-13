@@ -1,8 +1,7 @@
 package com.sam.api.model;
 
 import com.sam.api.model.audit.DateAudit;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -21,8 +20,10 @@ import java.util.Set;
                 "email"
         })
 })
+@Getter @Setter
+@Builder
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
 public class User extends DateAudit {
 
     @Id
