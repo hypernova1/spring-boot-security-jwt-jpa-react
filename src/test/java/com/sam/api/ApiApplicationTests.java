@@ -17,13 +17,13 @@ class ApiApplicationTests {
 
     @Test
     void testConnection() throws ClassNotFoundException {
-        Class.forName(DRIVER);
-
-        try(Connection conn = DriverManager.getConnection(URL, USER, PW)) {
-            System.out.println(conn);
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+//        Class.forName(DRIVER);
+//
+//        try(Connection conn = DriverManager.getConnection(URL, USER, PW)) {
+//            System.out.println(conn);
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
 
     }
 

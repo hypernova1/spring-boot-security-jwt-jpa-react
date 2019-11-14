@@ -29,6 +29,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.Collections;
+import java.util.HashSet;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -72,7 +73,9 @@ public class AuthController {
                 .name(signUpRequest.getName())
                 .username(signUpRequest.getUsername())
                 .email(signUpRequest.getEmail())
-                .password(passwordEncoder.encode(signUpRequest.getPassword())).build();
+                .password(passwordEncoder.encode(signUpRequest.getPassword()))
+                .roles(new HashSet<>())
+                .build();
 
         Role userRole = roleRepository.findByRoleName(RoleName.ROLE_USER)
                 .orElseThrow(() -> new AppException("User Role not set"));

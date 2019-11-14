@@ -14,6 +14,7 @@ import javax.persistence.MappedSuperclass;
         value = { "createdBy", "updatedBy" },
         allowGetters = true
 )
+@Getter @Setter
 public abstract class UserDateAudit extends DateAudit {
 
     @CreatedBy
@@ -22,6 +23,5 @@ public abstract class UserDateAudit extends DateAudit {
 
     @LastModifiedBy
     public Long updatedBy;
-
 
 }

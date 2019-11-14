@@ -8,7 +8,7 @@ import com.sam.api.repository.VoteRepository;
 import com.sam.api.security.CurrentUser;
 import com.sam.api.security.UserPrincipal;
 import com.sam.api.service.PollService;
-import com.sam.api.util.AppContstants;
+import com.sam.api.util.AppConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +40,8 @@ public class PollController {
 
     @GetMapping
     public PagedResponse<PollResponse> getPolls(@CurrentUser UserPrincipal currentUser,
-                                                @RequestParam(defaultValue = AppContstants.DEFAULT_PAGE_NUMBER) int page,
-                                                @RequestParam(defaultValue = AppContstants.DEFAULT_PAGE_SIZE) int size) {
+                                                @RequestParam(defaultValue = AppConstants.DEFAULT_PAGE_NUMBER) int page,
+                                                @RequestParam(defaultValue = AppConstants.DEFAULT_PAGE_SIZE) int size) {
         return pollService.getAllPolls(currentUser, page, size);
     }
 

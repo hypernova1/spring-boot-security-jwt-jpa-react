@@ -1,7 +1,6 @@
 package com.sam.api.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -13,6 +12,9 @@ import javax.persistence.*;
         })
 })
 @Getter @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Vote {
 
     @Id

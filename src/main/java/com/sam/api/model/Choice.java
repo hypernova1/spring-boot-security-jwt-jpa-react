@@ -1,8 +1,6 @@
 package com.sam.api.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -13,6 +11,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "choice")
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Choice {
 
     @Id
