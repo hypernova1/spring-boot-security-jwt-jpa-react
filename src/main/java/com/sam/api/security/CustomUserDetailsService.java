@@ -2,7 +2,6 @@ package com.sam.api.security;
 
 import com.sam.api.model.User;
 import com.sam.api.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

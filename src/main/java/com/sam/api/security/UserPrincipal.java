@@ -29,7 +29,7 @@ public class UserPrincipal implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public static UserPrincipal create(User user) {
+    static UserPrincipal create(User user) {
         List<GrantedAuthority> authorities = user.getRoles().stream().map(role ->
                 new SimpleGrantedAuthority(role.getRoleName().name())
         ).collect(Collectors.toList());
@@ -54,6 +54,14 @@ public class UserPrincipal implements UserDetails {
 
     public Long getId() {
         return this.id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getEmail() {
+        return this.email;
     }
 
     @Override
